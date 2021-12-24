@@ -146,7 +146,7 @@ for it in range(0, nt):
     ox[:,1:-1] = oxold[:, 1:-1] + (-dt/dx)*(p[:,1:]-p[:,:-1])-dt*k*(oxold*D_o)[:,1:-1]
     oy[1:-1, :] = oyold[1:-1, :] + (-dt/dy)*(p[1:,:]-p[:-1,:])-dt*k*(oyold.transpose()*D_o).transpose()[1:-1,:]
     
-#     # Perfect reflection 
+#     # Perfectly reflecting boundary
 #     xprev = vwedgepoints[0][1]
 #     for wy, wx in vwedgepoints:
 #         ox[wy, wx+1] = 0
